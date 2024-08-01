@@ -36,7 +36,7 @@ This script generates a file in the ADS format required by iQAgrar service and s
 To omit certain options set them in your config.php file. Make a copy of the config-example.php file
 and fill in your own values. Now you do no longer need to pass them via options.
 
-Usage: php -f index.php -- [-n] <company-name> [-m] <emailaddress> [-f] <file>
+Usage: php -f index.php -- [-f] <file>
 
 These options are available:
 
