@@ -1,3 +1,5 @@
-/.DS_Store
 /config.php
 /vendor
+
+# mac related
+.DS_Store
