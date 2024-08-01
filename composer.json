@@ -1,0 +1,43 @@
+{
+    "name": "sah-comp/iqagrar",
+    "description": "Send ADS formatted file to an e-mail address",
+    "version": "1.0.0",
+    "keywords": ["sah-comp", "PHP", "RedBeanPHP", "Flight", "iQAgrar"],
+    "license": "MIT",
+    "authors": [
+    {
+        "name": "Stephan A. Hombergs",
+        "email": "info@sah-company.com",
+        "homepage": "http://sah-company.com"
+    }],
+    "require":
+    {
+        "php": ">=8.2.17",
+        "parsecsv/php-parsecsv": "v1.2.*",
+        "phpmailer/phpmailer": "^6.5"
+    },
+    "suggest":
+    {
+        "mikecao/flight": "dev-master",
+        "gabordemooij/redbean": "dev-master",
+        "php-di/php-di": "v7.0.*",
+        "benmajor/redseed": "dev-master",
+        "netcarver/textile": "v4.1.0",
+        "docopt/docopt": "v1.0.*",
+        "goodby/csv": "*",
+        "mpdf/mpdf": "v8.1.3",
+        "parsecsv/php-parsecsv": "v1.2.*",
+        "phpmailer/phpmailer": "^6.5",
+        "phpcompatibility/php-compatibility": "*"
+    },
+    "autoload":
+    {
+        "files": [
+            "vendor/redbeanphp/rb.php"
+        ],
+        "psr-0":
+        {
+            "": "src/"
+        }
+    }
+}
