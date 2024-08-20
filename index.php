@@ -46,7 +46,7 @@ These options are available:
 -i <company-ident>   Identification of the company (slaughterhouse)
 -m <emailaddress>    E-Mailaddress where to send the ADS formatted file
 -s <emailaddress>    E-Mailaddress from where to send the ADS formatted file
--t <ip-address>      IP address of the mail relay
+-t <ip-address>      IP address or name of the mail relay
                      Use localhost for your local mail service
 DOC;
 
