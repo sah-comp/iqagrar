@@ -1,5 +1,6 @@
 <?php
-declare (strict_types = 1);
+
+declare(strict_types=1);
 
 /**
  * Day
@@ -75,11 +76,11 @@ class Model_Day extends RedBean_SimpleModel
             $stock->earmark         = strtoupper($row[4]);
             $stock->supplier        = strtoupper($row[3]);
             $stock->quality         = strtoupper($row[6]);
-            $stock->weight          = $row[10];
-            $stock->mfa             = $row[7];
-            $stock->flesh           = $row[8];
-            $stock->speck           = $row[9];
-            $stock->tare            = $row[11];
+            $stock->weight          = (float)$row[10];
+            $stock->mfa             = (float)$row[7];
+            $stock->flesh           = (float)$row[8];
+            $stock->speck           = (float)$row[9];
+            $stock->tare            = (float)$row[11];
             $stock->vvvo            = $row[5];
 
             if (trim($row[12])) {
@@ -268,8 +269,8 @@ class Model_Day extends RedBean_SimpleModel
         $mailer->isHTML(true);
         $mailer->Subject = $this->bean->companyIdent . ' ' . $this->bean->dateOfSlaughter;
         $text            = "Schlachtdaten vom " . $this->bean->dateOfSlaughter;
-        $mailer->Body    = $text;
-        $mailer->AltBody = '<h1>' . $text . '</h1>';
+        $mailer->Body    = "<h1>" . $text . "</h1>";
+        $mailer->AltBody = $text;
 
         $mailer->addStringAttachment($this->bean->ads, $this->bean->companyIdent . '-' . $this->bean->dateOfSlaughter . '.ads');
 

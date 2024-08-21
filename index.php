@@ -1,6 +1,6 @@
 <?php
 
-declare (strict_types=1);
+declare(strict_types=1);
 
 /**
  * Send ADS formatted file to an e-mail address
@@ -112,6 +112,10 @@ if (isset($options['t'])) {
 if (isset($options['f'])) {
 
     $file   = $options['f'];
+    if (!file_exists($file)) {
+        echo 'File ' . $file . ' not found.' . "\n";
+        exit();
+    }
     $day    = R::dispense('day');
     $parser = new \ParseCsv\Csv();
     $mailer = new \PHPMailer\PHPMailer\PHPMailer();
