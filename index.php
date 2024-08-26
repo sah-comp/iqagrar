@@ -114,7 +114,7 @@ if (isset($options['f'])) {
     $file   = $options['f'];
     if (!file_exists($file)) {
         echo 'File ' . $file . ' not found.' . "\n";
-        exit();
+        exit(1);
     }
     $day    = R::dispense('day');
     $parser = new \ParseCsv\Csv();
