@@ -7,10 +7,10 @@
 #0 21 * * * /Users/XYZ/Sites/APP/cli/backup.sh >/dev/null 2>&1
 
 # get the previous weekdate from the current date
-DAY_OF_WEEK="date +%w"
-if [ DAY_OF_WEEK = 0 ] ; then
+DAY_OF_WEEK=`date +%w`
+if [ $DAY_OF_WEEK = 2 ] ; then
   LOOK_BACK=2
-elif [ DAY_OF_WEEK = 1 ] ; then
+elif [ $DAY_OF_WEEK = 1 ] ; then
   LOOK_BACK=3
 else
   LOOK_BACK=1
