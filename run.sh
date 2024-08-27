@@ -8,7 +8,7 @@
 
 # get the previous weekdate from the current date
 DAY_OF_WEEK=`date +%w`
-if [ $DAY_OF_WEEK = 2 ] ; then
+if [ $DAY_OF_WEEK = 0 ] ; then
   LOOK_BACK=2
 elif [ $DAY_OF_WEEK = 1 ] ; then
   LOOK_BACK=3
