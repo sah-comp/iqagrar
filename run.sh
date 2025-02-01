@@ -19,6 +19,6 @@ fi
 PREV_DATE=`date -v -"$LOOK_BACK"d +"%Y%m%d";`
 
 # path to the .csv file with stock data
-PATH_TO_CSV="/Users/tk/Public/TK" 
+PATH_TO_CSV="/Users/tk/Public/ALL" 
 
 /opt/homebrew/opt/php@8.2/bin/php -f /Users/admin/Sites/iqagrar/index.php -- -f $PATH_TO_CSV$PREV_DATE.csv
